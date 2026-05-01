@@ -1,7 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import hyfLogo from "../../assets/hyf.svg";
 import { useAuth } from "../../context/AuthContext.jsx";
-
+import { Footer } from "../Footer/Footer.jsx";
 export default function Layout() {
   const { user, logout } = useAuth();
 
@@ -52,7 +52,9 @@ export default function Layout() {
         <Outlet />
       </main>
 
-      <footer>{/* Footer content goes here */}</footer>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
