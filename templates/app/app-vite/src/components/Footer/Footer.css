@@ -1,13 +1,17 @@
 .footer {
-  background-color: #d4d0c6;
-  color: #111210;
+  background-color: #121212;
+  color: #eff2ec;
   padding: 20px;
+  text-align: center;
 }
 
 .footer-main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 100px;
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .footer-links {
@@ -15,17 +19,26 @@
   margin: 0;
 }
 
+.footer-main h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-main p,
 .footer-links li {
-  list-style: none;
+  margin: 6px 0;
+  font-size: 14px;
+  color: #ebe3e3;
 }
 
 .footer-links a {
   text-decoration: none;
-  color: #030403;
+  color: #f7f4f4;
+  transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-  text-decoration: underline;
+  color: #00a878;
 }
 
 @media (max-width: 768px) {
