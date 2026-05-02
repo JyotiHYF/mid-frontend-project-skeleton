@@ -2,34 +2,20 @@ import { Link, Outlet } from "react-router-dom";
 import hyfLogo from "../../assets/hyf.svg";
 import { useAuth } from "../../context/AuthContext.jsx";
 import { Footer } from "../Footer/Footer.jsx";
+import "./Layout.css";
 export default function Layout() {
   const { user, logout } = useAuth();
 
   return (
     <div>
       <header>
-        <nav
-          style={{
-            width: "100%",
-            display: "flex",
-            gap: "20px",
-            justifyContent: "center",
-            alignItems: "center",
-            padding: "10px 20px",
-          }}
-        >
+        <nav className="navbar">
           <a
             href="https://www.hackyourfuture.dk/"
             target="_blank"
             className="link"
           >
-            <img
-              src={hyfLogo}
-              alt="HackYourFuture logo"
-              className="logo"
-              width={200}
-              style={{ padding: "20px" }}
-            />
+            <img src={hyfLogo} alt="HackYourFuture logo" className="logo" />
           </a>
           {/* Navigation links go here — e.g. link to event list, cart, login */}
           <Link to="/events" className="link">

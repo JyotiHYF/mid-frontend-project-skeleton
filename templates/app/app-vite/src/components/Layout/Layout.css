@@ -1,0 +1,17 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 20px;
+  padding: 0 2rem;
+  background-color: #eef5f5;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo {
+  padding: 20px;
+  width: 140px;
+}
