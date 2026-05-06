@@ -16,7 +16,7 @@ function EventPage() {
 
       try {
         const res = await fetch(
-          `http://localhost:3001/events?q=${search}&_page=${page}&_limit=5`,
+          `http://localhost:3001/events?q=${search}&_page=${page}&_limit=3`,
         );
 
         if (!res.ok) throw new Error("Failed to fetch events");
@@ -68,7 +68,7 @@ function EventPage() {
 
             <button
               onClick={() => setPage((p) => p + 1)}
-              disabled={events.length < 5}
+              disabled={events.length < 3}
             >
               Next
             </button>
