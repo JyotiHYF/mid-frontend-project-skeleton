@@ -10,27 +10,30 @@ export default function Layout() {
     <div>
       <header>
         <nav className="navbar">
-          <a
-            href="https://www.hackyourfuture.dk/"
-            target="_blank"
-            className="link"
-          >
-            <img src={hyfLogo} alt="HackYourFuture logo" className="logo" />
-          </a>
-          {/* Navigation links go here — e.g. link to event list, cart, login */}
-          <Link to="/events" className="link">
-            Events
-          </Link>
+          <div className="nav-left">
+            <a
+              href="https://www.hackyourfuture.dk/"
+              target="_blank"
+              className="link"
+            >
+              <img src={hyfLogo} alt="HackYourFuture logo" className="logo" />
+            </a>
+            <Link to="/">Home</Link>
+            <Link to="/events" className="link">
+              Events
+            </Link>
+          </div>
+          <div className="nav-right">
+            {user && (
+              <>
+                <span>{user.email}</span>
+                <button onClick={logout}>Sign out</button>
+              </>
+            )}
 
-          {user && (
-            <>
-              <span>{user.email}</span>
-              <button onClick={logout}>Sign out</button>
-            </>
-          )}
-
-          <Link to="/login">Login</Link>
-          <Link to="/register">Register</Link>
+            <Link to="/login">Login</Link>
+            <Link to="/register">Register</Link>
+          </div>
         </nav>
       </header>
 
