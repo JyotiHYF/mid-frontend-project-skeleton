@@ -1,11 +1,11 @@
 .event-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
 }
 
 .event-list {
-  padding: 2rem;
+  padding: 20px;
 }
 .selected-card {
   border-radius: 24px;

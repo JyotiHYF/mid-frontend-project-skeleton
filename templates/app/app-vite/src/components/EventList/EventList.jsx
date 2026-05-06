@@ -6,10 +6,6 @@ export default function EventList({
   onSelectEvent,
   selectedEvent,
 }) {
-  if (!Array.isArray(events) || events.length === 0) {
-    return <p>No events available 😢</p>;
-  }
-
   return (
     <section className="event-list">
       <h1>Upcoming Events</h1>

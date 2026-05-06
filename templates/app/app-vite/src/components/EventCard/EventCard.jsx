@@ -1,5 +1,5 @@
 import "./EventCard.css";
-import { useState } from "react";
+
 export function EventCard({ event }) {
   const isSoldOut = event.ticketsAvailable === 0;
 
