@@ -1,14 +1,17 @@
 .event-card {
-  background-color: #b667b5;
+  background-color: #d0d6cf;
   padding: 1rem;
   border-radius: 24px;
-}
 
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 .buy-ticket-btn {
-  margin-top: 10px;
+  margin-top: auto;
   border: none;
   border-radius: 12px;
-  padding: 12px 24px;
+  padding: 10px;
   background-color: #00a878;
   color: #fbfef9;
   font-size: 16px;
@@ -24,8 +27,11 @@
 
 .buy-ticket-btn:hover {
   box-shadow: 0px 0px 10px #888;
+  background: #5a67d8;
 }
 
 .buy-ticket-btn:disabled:hover {
   box-shadow: none;
+  background: gray;
+  cursor: not-allowed;
 }

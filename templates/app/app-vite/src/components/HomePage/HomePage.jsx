@@ -1,13 +1,20 @@
-import EventDetail from "../EventDetail/EventDetail";
-import EventList from "../EventList/EventList";
+import { Link } from "react-router-dom";
+import "./HomePage.css";
 
-function HomePage() {
+export default function HomePage() {
   return (
-    <div className="home-content">
-      <EventList />
-      <EventDetail />
+    <div className="home">
+      <div className="hero">
+        <h1>Discover Events Near You 🎉</h1>
+        <p>
+          Find conferences, workshops, hackathons and meetups happening near
+          you. Explore, book, and join events in seconds.
+        </p>
+
+        <Link to="/events">
+          <button className="cta-btn">Discover Events</button>
+        </Link>
+      </div>
     </div>
   );
 }
-
-export default HomePage;

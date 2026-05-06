@@ -1,0 +1,38 @@
+.home {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: rgb(25, 7, 7);
+}
+
+.hero {
+  text-align: center;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.2 rem;
+  margin-bottom: 24px;
+}
+
+.cta-btn {
+  background: rgb(163, 183, 92);
+  color: #333;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+}

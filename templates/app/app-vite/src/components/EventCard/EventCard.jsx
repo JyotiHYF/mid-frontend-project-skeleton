@@ -16,10 +16,16 @@ export function EventCard({ event }) {
       </p>
 
       <h4>{event.price === 0 ? "Free" : `${event.price} DKK`}</h4>
+      {isSoldOut ? (
+        <p>Sold out</p>
+      ) : (
+        <p>{event.ticketsAvailable} tickets left</p>
+      )}
 
       <button
-        className={`buy-ticket-btn ${isSoldOut ? "disabled" : ""}`}
+        className="buy-ticket-btn"
         disabled={isSoldOut}
+        onClick={(e) => e.stopPropagation()}
       >
         {isSoldOut ? "Sold out" : "Buy a ticket"}
       </button>
