@@ -1,5 +1,14 @@
 body {
+  height: 100%;
   margin: 0;
   font-family: system-ui, sans-serif;
   background-color: #7171c3;
+}
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
 }
