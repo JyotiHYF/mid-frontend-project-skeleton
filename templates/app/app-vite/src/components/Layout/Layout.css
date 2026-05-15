@@ -4,14 +4,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 0px 40px;
-  height: 120px;
+  height: 80px;
   box-sizing: border-box;
 
   background: #fbfcfe;
 }
 .logo {
   padding: 20px;
-  width: 100px;
+  width: 80px;
 }
 .nav-left {
   display: flex;
@@ -57,4 +57,13 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+@media (max-width: 768px) {
+  .event-detail {
+    flex-direction: column;
+  }
+
+  .cart-page {
+    padding: 10px;
+  }
 }

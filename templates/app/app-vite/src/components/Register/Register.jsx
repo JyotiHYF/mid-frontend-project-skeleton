@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 export default function Register() {
   const { register } = useAuth();
   const navigate = useNavigate();
@@ -47,14 +47,19 @@ export default function Register() {
 
   return (
     <div className="auth-wrapper">
-      <h1>Register</h1>
-
       <form onSubmit={handleSubmit} className="auth-form">
+        <Link to="/" className="back-home">
+          ← Back to Home
+        </Link>
+
+        <h1>Create Account ✨</h1>
+
+        <p className="auth-subtitle">Join and book your next tech event</p>
         <input
+          type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          style={{ width: "100%", marginBottom: "8px" }}
         />
 
         <input
@@ -62,7 +67,6 @@ export default function Register() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          style={{ width: "100%", marginBottom: "8px" }}
         />
 
         <input
@@ -70,14 +74,15 @@ export default function Register() {
           placeholder="Confirm Password"
           value={confirm}
           onChange={(e) => setConfirm(e.target.value)}
-          style={{ width: "100%", marginBottom: "8px" }}
         />
 
         <button style={{ width: "100%" }} disabled={loading}>
           {loading ? "Creating account..." : "Register"}
         </button>
-
-        {error && <p style={{ color: "red", marginTop: "10px" }}>{error}</p>}
+        <p className="auth-switch">
+          Already have an account? <Link to="/login">Login</Link>
+        </p>
+        {error && <p className="auth-error">{error}</p>}
       </form>
     </div>
   );

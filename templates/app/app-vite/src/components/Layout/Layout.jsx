@@ -38,8 +38,14 @@ export default function Layout() {
                 <span className="cart-count">{totalItems}</span>
               )}
             </Link>
-            <Link to="/login">Login</Link>
-            <Link to="/register">Register</Link>
+            {user && <Link to="/orders">My Orders</Link>}
+
+            {!user && (
+              <>
+                <Link to="/login">Login</Link>
+                <Link to="/register">Register</Link>
+              </>
+            )}
           </div>
         </nav>
       </header>

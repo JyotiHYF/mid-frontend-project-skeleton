@@ -1,6 +1,7 @@
 import { useCart } from "../../context/CartContext";
 import "./CartPage.css";
 import { Link } from "react-router-dom";
+
 export default function CartPage() {
   const { cartItems, removeFromCart, updateQuantity, clearCart, total } =
     useCart();
@@ -60,8 +61,9 @@ export default function CartPage() {
           <button className="clear-btn" onClick={clearCart}>
             Clear cart
           </button>
-
-          <button className="checkout-btn">Checkout</button>
+          <Link to="/checkout">
+            <button className="checkout-btn">Checkout</button>
+          </Link>
         </div>
       </div>
     </div>

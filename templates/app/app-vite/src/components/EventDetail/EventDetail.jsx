@@ -46,7 +46,6 @@ export default function EventDetail({ event }) {
         </p>
         {!inCart ? (
           <>
-            {/* BEFORE ADDING */}
             <div className="quantity-control">
               <label>Quantity:</label>
               <input
@@ -80,7 +79,6 @@ export default function EventDetail({ event }) {
           </>
         ) : (
           <>
-            {/* AFTER ADDED */}
             <div className="qty-controls">
               <button
                 onClick={() => updateQuantity(event.id, inCart.quantity - 1)}
@@ -100,7 +98,6 @@ export default function EventDetail({ event }) {
               <span className="added-text">Added ✓</span>
             </div>
 
-            {/* REMOVE GOES HERE */}
             <button
               className="remove-btn"
               onClick={() => updateQuantity(event.id, 0)}

@@ -1,5 +1,36 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "testuser@test.com",
+      "password": "$2a$10$yNHgJ1cT.vYcbTNl/uz5/.TYm85kfXr/KL81Tqbj7eo9EMwjH2pLa",
+      "id": 1
+    },
+    {
+      "email": "jyoti@gmail.com",
+      "password": "$2a$10$bFSrQrwufnL9ONMVWADgjeEzgKvhgmywJa9skirVH2D4MVVsULolW",
+      "id": 2
+    },
+    {
+      "email": "jyotimanyata@test.com",
+      "password": "$2a$10$0/llUbDuYYnfXqoSiSm/LOz26vUf6p5fthcFmsz4rohO9vQBzp/Lq",
+      "id": 3
+    },
+    {
+      "email": "manta@test.com",
+      "password": "$2a$10$ZVqspn0u0x1kkfm8v0x3su79gdzgfUNKQXCGozOZmRuuLhxFnGc6K",
+      "id": 4
+    },
+    {
+      "email": "rashmi@test.com",
+      "password": "$2a$10$ZmYdTaVdUd6jVo1cdvb5cefZ8WWyRg0BJHvizJC9hNsB9Szvomzou",
+      "id": 5
+    },
+    {
+      "email": "manyata@test.com",
+      "password": "$2a$10$Pu.hllVjreankK6Nr9mZ6unXrO7iRBpqkFUYPgl5sD2PDpplBPrDi",
+      "id": 6
+    }
+  ],
   "events": [
     {
       "id": 1,
@@ -132,5 +163,532 @@
       "category": "Workshop"
     }
   ],
-  "orders": []
+  "orders": [
+    {
+      "userId": 1,
+      "items": [
+        {
+          "id": 2,
+          "name": "Hackathon: Build with AI",
+          "date": "2026-04-25",
+          "time": "09:00",
+          "venue": "BLOX",
+          "city": "Copenhagen",
+          "description": "A 24-hour hackathon where teams of 2–4 build something real using AI APIs. Cash prizes, free food, and mentoring from engineers at leading AI companies. All skill levels welcome.",
+          "price": 0,
+          "ticketsAvailable": 60,
+          "totalTickets": 150,
+          "category": "Hackathon",
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "name": "JavaScript: Modern Patterns Workshop",
+          "date": "2026-05-03",
+          "time": "10:00",
+          "venue": "Founders House",
+          "city": "Copenhagen",
+          "description": "A hands-on full-day workshop covering modern JavaScript patterns: closures, async/await, Promises, modules, and functional techniques. Bring your laptop. Small group, individual coaching included.",
+          "price": 79,
+          "ticketsAvailable": 12,
+          "totalTickets": 30,
+          "category": "Workshop",
+          "quantity": 1
+        }
+      ],
+      "total": 79,
+      "createdAt": "2026-05-10T16:43:07.962Z",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "items": [
+        {
+          "id": 5,
+          "name": "Copenhagen JS Meetup",
+          "date": "2026-05-20",
+          "time": "18:30",
+          "venue": "Novo Nordisk Digital Hub",
+          "city": "Copenhagen",
+          "description": "Monthly JavaScript community meetup. Two talks from local developers, followed by drinks and networking. This month: state management in 2026 and a live coding session on Vite plugins.",
+          "price": 0,
+          "ticketsAvailable": 85,
+          "totalTickets": 120,
+          "category": "Meetup",
+          "quantity": 2
+        },
+        {
+          "id": 4,
+          "name": "TypeScript Deep Dive",
+          "date": "2026-05-10",
+          "time": "10:00",
+          "venue": "IDA Conference Centre",
+          "city": "Copenhagen",
+          "description": "Go beyond the basics. This workshop covers generics, conditional types, utility types, declaration merging, and integrating TypeScript into large codebases. Prior TypeScript experience required.",
+          "price": 89,
+          "ticketsAvailable": 18,
+          "totalTickets": 25,
+          "category": "Workshop",
+          "quantity": 2
+        }
+      ],
+      "total": 178,
+      "createdAt": "2026-05-10T16:47:21.696Z",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "items": [],
+      "total": 0,
+      "createdAt": "2026-05-10T16:47:27.948Z",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "items": [],
+      "total": 0,
+      "createdAt": "2026-05-10T16:47:28.545Z",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "items": [
+        {
+          "id": 3,
+          "name": "JavaScript: Modern Patterns Workshop",
+          "date": "2026-05-03",
+          "time": "10:00",
+          "venue": "Founders House",
+          "city": "Copenhagen",
+          "description": "A hands-on full-day workshop covering modern JavaScript patterns: closures, async/await, Promises, modules, and functional techniques. Bring your laptop. Small group, individual coaching included.",
+          "price": 79,
+          "ticketsAvailable": 12,
+          "totalTickets": 30,
+          "category": "Workshop",
+          "quantity": 1
+        },
+        {
+          "id": 4,
+          "name": "TypeScript Deep Dive",
+          "date": "2026-05-10",
+          "time": "10:00",
+          "venue": "IDA Conference Centre",
+          "city": "Copenhagen",
+          "description": "Go beyond the basics. This workshop covers generics, conditional types, utility types, declaration merging, and integrating TypeScript into large codebases. Prior TypeScript experience required.",
+          "price": 89,
+          "ticketsAvailable": 18,
+          "totalTickets": 25,
+          "category": "Workshop",
+          "quantity": 1
+        }
+      ],
+      "total": 168,
+      "createdAt": "2026-05-10T16:49:36.386Z",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "items": [
+        {
+          "id": 2,
+          "name": "Hackathon: Build with AI",
+          "date": "2026-04-25",
+          "time": "09:00",
+          "venue": "BLOX",
+          "city": "Copenhagen",
+          "description": "A 24-hour hackathon where teams of 2–4 build something real using AI APIs. Cash prizes, free food, and mentoring from engineers at leading AI companies. All skill levels welcome.",
+          "price": 0,
+          "ticketsAvailable": 60,
+          "totalTickets": 150,
+          "category": "Hackathon",
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "name": "JavaScript: Modern Patterns Workshop",
+          "date": "2026-05-03",
+          "time": "10:00",
+          "venue": "Founders House",
+          "city": "Copenhagen",
+          "description": "A hands-on full-day workshop covering modern JavaScript patterns: closures, async/await, Promises, modules, and functional techniques. Bring your laptop. Small group, individual coaching included.",
+          "price": 79,
+          "ticketsAvailable": 12,
+          "totalTickets": 30,
+          "category": "Workshop",
+          "quantity": 1
+        },
+        {
+          "id": 4,
+          "name": "TypeScript Deep Dive",
+          "date": "2026-05-10",
+          "time": "10:00",
+          "venue": "IDA Conference Centre",
+          "city": "Copenhagen",
+          "description": "Go beyond the basics. This workshop covers generics, conditional types, utility types, declaration merging, and integrating TypeScript into large codebases. Prior TypeScript experience required.",
+          "price": 89,
+          "ticketsAvailable": 18,
+          "totalTickets": 25,
+          "category": "Workshop",
+          "quantity": 1
+        }
+      ],
+      "total": 168,
+      "createdAt": "2026-05-10T16:51:31.977Z",
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "items": [
+        {
+          "id": 2,
+          "name": "Hackathon: Build with AI",
+          "date": "2026-04-25",
+          "time": "09:00",
+          "venue": "BLOX",
+          "city": "Copenhagen",
+          "description": "A 24-hour hackathon where teams of 2–4 build something real using AI APIs. Cash prizes, free food, and mentoring from engineers at leading AI companies. All skill levels welcome.",
+          "price": 0,
+          "ticketsAvailable": 60,
+          "totalTickets": 150,
+          "category": "Hackathon",
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "name": "JavaScript: Modern Patterns Workshop",
+          "date": "2026-05-03",
+          "time": "10:00",
+          "venue": "Founders House",
+          "city": "Copenhagen",
+          "description": "A hands-on full-day workshop covering modern JavaScript patterns: closures, async/await, Promises, modules, and functional techniques. Bring your laptop. Small group, individual coaching included.",
+          "price": 79,
+          "ticketsAvailable": 12,
+          "totalTickets": 30,
+          "category": "Workshop",
+          "quantity": 1
+        }
+      ],
+      "total": 79,
+      "createdAt": "2026-05-10T16:53:32.864Z",
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "items": [
+        {
+          "id": 2,
+          "name": "Hackathon: Build with AI",
+          "date": "2026-04-25",
+          "time": "09:00",
+          "venue": "BLOX",
+          "city": "Copenhagen",
+          "description": "A 24-hour hackathon where teams of 2–4 build something real using AI APIs. Cash prizes, free food, and mentoring from engineers at leading AI companies. All skill levels welcome.",
+          "price": 0,
+          "ticketsAvailable": 60,
+          "totalTickets": 150,
+          "category": "Hackathon",
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "name": "JavaScript: Modern Patterns Workshop",
+          "date": "2026-05-03",
+          "time": "10:00",
+          "venue": "Founders House",
+          "city": "Copenhagen",
+          "description": "A hands-on full-day workshop covering modern JavaScript patterns: closures, async/await, Promises, modules, and functional techniques. Bring your laptop. Small group, individual coaching included.",
+          "price": 79,
+          "ticketsAvailable": 12,
+          "totalTickets": 30,
+          "category": "Workshop",
+          "quantity": 1
+        }
+      ],
+      "total": 79,
+      "createdAt": "2026-05-10T16:55:20.921Z",
+      "id": 8
+    },
+    {
+      "userId": 3,
+      "items": [
+        {
+          "id": 3,
+          "name": "JavaScript: Modern Patterns Workshop",
+          "date": "2026-05-03",
+          "time": "10:00",
+          "venue": "Founders House",
+          "city": "Copenhagen",
+          "description": "A hands-on full-day workshop covering modern JavaScript patterns: closures, async/await, Promises, modules, and functional techniques. Bring your laptop. Small group, individual coaching included.",
+          "price": 79,
+          "ticketsAvailable": 12,
+          "totalTickets": 30,
+          "category": "Workshop",
+          "quantity": 1
+        },
+        {
+          "id": 2,
+          "name": "Hackathon: Build with AI",
+          "date": "2026-04-25",
+          "time": "09:00",
+          "venue": "BLOX",
+          "city": "Copenhagen",
+          "description": "A 24-hour hackathon where teams of 2–4 build something real using AI APIs. Cash prizes, free food, and mentoring from engineers at leading AI companies. All skill levels welcome.",
+          "price": 0,
+          "ticketsAvailable": 60,
+          "totalTickets": 150,
+          "category": "Hackathon",
+          "quantity": 1
+        },
+        {
+          "id": 4,
+          "name": "TypeScript Deep Dive",
+          "date": "2026-05-10",
+          "time": "10:00",
+          "venue": "IDA Conference Centre",
+          "city": "Copenhagen",
+          "description": "Go beyond the basics. This workshop covers generics, conditional types, utility types, declaration merging, and integrating TypeScript into large codebases. Prior TypeScript experience required.",
+          "price": 89,
+          "ticketsAvailable": 18,
+          "totalTickets": 25,
+          "category": "Workshop",
+          "quantity": 1
+        }
+      ],
+      "total": 168,
+      "createdAt": "2026-05-11T08:15:06.048Z",
+      "id": 9
+    },
+    {
+      "userId": 3,
+      "items": [
+        {
+          "id": 2,
+          "name": "Hackathon: Build with AI",
+          "date": "2026-04-25",
+          "time": "09:00",
+          "venue": "BLOX",
+          "city": "Copenhagen",
+          "description": "A 24-hour hackathon where teams of 2–4 build something real using AI APIs. Cash prizes, free food, and mentoring from engineers at leading AI companies. All skill levels welcome.",
+          "price": 0,
+          "ticketsAvailable": 60,
+          "totalTickets": 150,
+          "category": "Hackathon",
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "name": "JavaScript: Modern Patterns Workshop",
+          "date": "2026-05-03",
+          "time": "10:00",
+          "venue": "Founders House",
+          "city": "Copenhagen",
+          "description": "A hands-on full-day workshop covering modern JavaScript patterns: closures, async/await, Promises, modules, and functional techniques. Bring your laptop. Small group, individual coaching included.",
+          "price": 79,
+          "ticketsAvailable": 12,
+          "totalTickets": 30,
+          "category": "Workshop",
+          "quantity": 1
+        }
+      ],
+      "total": 79,
+      "createdAt": "2026-05-11T10:10:34.939Z",
+      "id": 10
+    },
+    {
+      "userId": 3,
+      "items": [
+        {
+          "id": 2,
+          "name": "Hackathon: Build with AI",
+          "date": "2026-04-25",
+          "time": "09:00",
+          "venue": "BLOX",
+          "city": "Copenhagen",
+          "description": "A 24-hour hackathon where teams of 2–4 build something real using AI APIs. Cash prizes, free food, and mentoring from engineers at leading AI companies. All skill levels welcome.",
+          "price": 0,
+          "ticketsAvailable": 60,
+          "totalTickets": 150,
+          "category": "Hackathon",
+          "quantity": 1
+        }
+      ],
+      "total": 0,
+      "createdAt": "2026-05-11T10:17:47.236Z",
+      "id": 11
+    },
+    {
+      "userId": 3,
+      "items": [
+        {
+          "id": 2,
+          "name": "Hackathon: Build with AI",
+          "date": "2026-04-25",
+          "time": "09:00",
+          "venue": "BLOX",
+          "city": "Copenhagen",
+          "description": "A 24-hour hackathon where teams of 2–4 build something real using AI APIs. Cash prizes, free food, and mentoring from engineers at leading AI companies. All skill levels welcome.",
+          "price": 0,
+          "ticketsAvailable": 60,
+          "totalTickets": 150,
+          "category": "Hackathon",
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "name": "JavaScript: Modern Patterns Workshop",
+          "date": "2026-05-03",
+          "time": "10:00",
+          "venue": "Founders House",
+          "city": "Copenhagen",
+          "description": "A hands-on full-day workshop covering modern JavaScript patterns: closures, async/await, Promises, modules, and functional techniques. Bring your laptop. Small group, individual coaching included.",
+          "price": 79,
+          "ticketsAvailable": 12,
+          "totalTickets": 30,
+          "category": "Workshop",
+          "quantity": 1
+        }
+      ],
+      "total": 79,
+      "createdAt": "2026-05-11T10:21:43.947Z",
+      "id": 12
+    },
+    {
+      "userId": 3,
+      "items": [
+        {
+          "id": 3,
+          "name": "JavaScript: Modern Patterns Workshop",
+          "date": "2026-05-03",
+          "time": "10:00",
+          "venue": "Founders House",
+          "city": "Copenhagen",
+          "description": "A hands-on full-day workshop covering modern JavaScript patterns: closures, async/await, Promises, modules, and functional techniques. Bring your laptop. Small group, individual coaching included.",
+          "price": 79,
+          "ticketsAvailable": 12,
+          "totalTickets": 30,
+          "category": "Workshop",
+          "quantity": 1
+        }
+      ],
+      "total": 79,
+      "createdAt": "2026-05-11T14:21:45.285Z",
+      "id": 13
+    },
+    {
+      "userId": 4,
+      "items": [
+        {
+          "id": 2,
+          "name": "Hackathon: Build with AI",
+          "date": "2026-04-25",
+          "time": "09:00",
+          "venue": "BLOX",
+          "city": "Copenhagen",
+          "description": "A 24-hour hackathon where teams of 2–4 build something real using AI APIs. Cash prizes, free food, and mentoring from engineers at leading AI companies. All skill levels welcome.",
+          "price": 0,
+          "ticketsAvailable": 60,
+          "totalTickets": 150,
+          "category": "Hackathon",
+          "quantity": 1
+        }
+      ],
+      "total": 0,
+      "createdAt": "2026-05-11T21:17:05.979Z",
+      "id": 14
+    },
+    {
+      "userId": 5,
+      "items": [
+        {
+          "id": 2,
+          "name": "Hackathon: Build with AI",
+          "date": "2026-04-25",
+          "time": "09:00",
+          "venue": "BLOX",
+          "city": "Copenhagen",
+          "description": "A 24-hour hackathon where teams of 2–4 build something real using AI APIs. Cash prizes, free food, and mentoring from engineers at leading AI companies. All skill levels welcome.",
+          "price": 0,
+          "ticketsAvailable": 60,
+          "totalTickets": 150,
+          "category": "Hackathon",
+          "quantity": 1
+        }
+      ],
+      "total": 0,
+      "createdAt": "2026-05-12T08:42:17.458Z",
+      "id": 15
+    },
+    {
+      "userId": 6,
+      "items": [
+        {
+          "id": 2,
+          "name": "Hackathon: Build with AI",
+          "date": "2026-04-25",
+          "time": "09:00",
+          "venue": "BLOX",
+          "city": "Copenhagen",
+          "description": "A 24-hour hackathon where teams of 2–4 build something real using AI APIs. Cash prizes, free food, and mentoring from engineers at leading AI companies. All skill levels welcome.",
+          "price": 0,
+          "ticketsAvailable": 60,
+          "totalTickets": 150,
+          "category": "Hackathon",
+          "quantity": 2
+        },
+        {
+          "id": 3,
+          "name": "JavaScript: Modern Patterns Workshop",
+          "date": "2026-05-03",
+          "time": "10:00",
+          "venue": "Founders House",
+          "city": "Copenhagen",
+          "description": "A hands-on full-day workshop covering modern JavaScript patterns: closures, async/await, Promises, modules, and functional techniques. Bring your laptop. Small group, individual coaching included.",
+          "price": 79,
+          "ticketsAvailable": 12,
+          "totalTickets": 30,
+          "category": "Workshop",
+          "quantity": 1
+        }
+      ],
+      "total": 79,
+      "createdAt": "2026-05-13T08:48:04.511Z",
+      "id": 16
+    },
+    {
+      "userId": 6,
+      "items": [
+        {
+          "id": 2,
+          "name": "Hackathon: Build with AI",
+          "date": "2026-04-25",
+          "time": "09:00",
+          "venue": "BLOX",
+          "city": "Copenhagen",
+          "description": "A 24-hour hackathon where teams of 2–4 build something real using AI APIs. Cash prizes, free food, and mentoring from engineers at leading AI companies. All skill levels welcome.",
+          "price": 0,
+          "ticketsAvailable": 60,
+          "totalTickets": 150,
+          "category": "Hackathon",
+          "quantity": 1
+        },
+        {
+          "id": 3,
+          "name": "JavaScript: Modern Patterns Workshop",
+          "date": "2026-05-03",
+          "time": "10:00",
+          "venue": "Founders House",
+          "city": "Copenhagen",
+          "description": "A hands-on full-day workshop covering modern JavaScript patterns: closures, async/await, Promises, modules, and functional techniques. Bring your laptop. Small group, individual coaching included.",
+          "price": 79,
+          "ticketsAvailable": 12,
+          "totalTickets": 30,
+          "category": "Workshop",
+          "quantity": 1
+        }
+      ],
+      "total": 79,
+      "createdAt": "2026-05-13T08:51:08.131Z",
+      "id": 17
+    }
+  ]
 }

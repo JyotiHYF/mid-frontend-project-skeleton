@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import { useAuth } from "../../context/AuthContext";
 import "./Login.css";
@@ -39,29 +39,35 @@ export default function Login() {
 
   return (
     <div className="auth-wrapper">
-      <h1>Login</h1>
-
       <form onSubmit={handleSubmit} className="auth-form">
+        <Link to="/" className="back-home">
+          ← Back to Home
+        </Link>
+
+        <h1>Welcome Back 👋</h1>
+
+        <p className="auth-subtitle">Login to continue exploring events</p>
         <input
-          placeholder="Email"
+          type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          style={{ width: "100%", marginBottom: "8px" }}
+          placeholder="Enter your email"
         />
 
         <input
           type="password"
-          placeholder="Password"
+          placeholder="Enter your Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          style={{ width: "100%", marginBottom: "8px" }}
         />
 
-        <button style={{ width: "100%" }} disabled={loading}>
+        {error && <p className="auth-error">{error}</p>}
+        <button type="submit" disabled={loading}>
           {loading ? "Logging in..." : "Login"}
         </button>
-
-        {error && <p style={{ color: "red", marginTop: "10px" }}>{error}</p>}
+        <p className="auth-switch">
+          New user? <Link to="/register">Create an account</Link>
+        </p>
       </form>
     </div>
   );

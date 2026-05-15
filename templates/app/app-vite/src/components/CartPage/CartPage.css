@@ -115,3 +115,12 @@
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .event-detail {
+    flex-direction: column;
+  }
+
+  .cart-page {
+    padding: 10px;
+  }
+}
