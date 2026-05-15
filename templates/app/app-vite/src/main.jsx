@@ -5,10 +5,15 @@ import Layout from "./components/Layout/Layout.jsx";
 import EventPage from "./components/EventPage/EventPage.jsx"; // 👈 renamed correctly
 import HomePage from "./components/HomePage/HomePage.jsx";
 import Login from "./components/Login/Login.jsx";
-
+import { CartProvider } from "./context/CartContext.jsx";
 import Register from "./components/Register/Register.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
+import CartPage from "./components/CartPage/CartPage.jsx";
 import "./main.css";
+import CheckoutPage from "./components/CheckoutPage/CheckoutPage.jsx";
+import OrdersPage from "./components/OrdersPage/OrdersPage.jsx";
+import OrderDetailPage from "./components/OrderDetailPage/OrderDetailPage.jsx";
+import OrderSuccess from "./components/OrderSuccess/OrderSuccess.jsx";
 // Cart model: cart items are stored in localStorage via CartContext (no backend needed).
 // At checkout, the cart is POSTed to POST /api/orders and then cleared.
 // CartContext should follow the same pattern as AuthContext — see that file for reference.
@@ -20,6 +25,11 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "events", element: <EventPage /> },
+      { path: "cart", element: <CartPage /> },
+      { path: "checkout", element: <CheckoutPage /> },
+      { path: "orders", element: <OrdersPage /> },
+      { path: "orders/:id", element: <OrderDetailPage /> },
+      { path: "order-success", element: <OrderSuccess /> },
     ],
   },
   { path: "/login", element: <Login /> },
@@ -29,7 +39,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
-      <RouterProvider router={router} />
+      <CartProvider>
+        <RouterProvider router={router} />
+      </CartProvider>
     </AuthProvider>
   </React.StrictMode>,
 );

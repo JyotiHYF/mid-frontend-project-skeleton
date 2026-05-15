@@ -1,5 +1,34 @@
 body {
+  height: 100%;
   margin: 0;
-  font-family: system-ui, sans-serif;
-  background-color: #7171c3;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif;
+
+  background: #f8fafc;
+
+  color: #111827;
+}
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+.auth-switch {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.auth-switch a {
+  color: #111827;
+  font-weight: 600;
+  text-decoration: none;
 }

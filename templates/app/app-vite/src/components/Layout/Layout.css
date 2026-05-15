@@ -4,14 +4,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 0px 40px;
-  height: 120px;
+  height: 80px;
   box-sizing: border-box;
 
   background: #fbfcfe;
 }
 .logo {
   padding: 20px;
-  width: 100px;
+  width: 80px;
 }
 .nav-left {
   display: flex;
@@ -36,4 +36,34 @@
 
 .navbar a:hover {
   background: #b8c1d1;
+}
+.cart-link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.cart-count {
+  font-size: 0.7rem;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  position: absolute;
+  top: -8px;
+  right: -12px;
+}
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+@media (max-width: 768px) {
+  .event-detail {
+    flex-direction: column;
+  }
+
+  .cart-page {
+    padding: 10px;
+  }
 }

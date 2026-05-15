@@ -1,5 +1,5 @@
 .footer {
-  background-color: #121212;
+  background-color: #070707;
   color: #eff2ec;
   padding: 20px;
   text-align: center;
@@ -8,7 +8,7 @@
 .footer-main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 100px;
+  gap: 180px;
   text-align: left;
   max-width: 1000px;
   margin: 0 auto;

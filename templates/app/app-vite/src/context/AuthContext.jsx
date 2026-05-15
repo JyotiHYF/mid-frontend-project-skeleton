@@ -14,7 +14,7 @@ export function AuthProvider({ children }) {
   });
 
   async function login(email, password) {
-    const response = await fetch(api("/login"), {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
@@ -29,16 +29,26 @@ export function AuthProvider({ children }) {
   }
 
   async function register(email, password) {
-    // TODO: POST to api("/register") with { email, password }
-    // TODO: if the response is not ok, throw an error
-    // TODO: destructure { accessToken, user } from the response JSON
-    // TODO: call `persist` with accessToken and user to save the session
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/register`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Registration failed");
+    }
+
+    const { accessToken, user } = await response.json();
+
+    persist(accessToken, user);
   }
 
   function logout() {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
-    // TODO add the missing logout logic here — clear the token and user from state as well
+    setToken(null);
+    setUser(null);
   }
 
   function persist(accessToken, user) {
