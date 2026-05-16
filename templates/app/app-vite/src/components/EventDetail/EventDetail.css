@@ -48,17 +48,18 @@
 }
 @media (max-width: 768px) {
   .event-detail {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    padding: 16px;
+    margin: 20px 10px;
   }
 
-  .cart-page {
-    padding: 10px;
+  .event-right {
+    position: static; /* disables sticky on mobile */
   }
-}
-.event-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #111827;
+
+  .event-title {
+    font-size: 1.8rem;
+  }
 }
 
 .event-meta {

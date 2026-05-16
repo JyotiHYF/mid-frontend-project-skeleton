@@ -14,7 +14,7 @@ function EventPage() {
     const fetchEvents = async () => {
       setLoading(true);
       setError("");
-
+      setSelectedEvent(null);
       try {
         const res = await fetch(
           `${import.meta.env.VITE_API_URL}/api/events?q=${search}&_page=${page}&_limit=3`,
