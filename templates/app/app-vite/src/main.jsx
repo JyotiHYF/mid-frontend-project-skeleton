@@ -10,6 +10,7 @@ import Register from "./components/Register/Register.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import CartPage from "./components/CartPage/CartPage.jsx";
 import "./main.css";
+import EventDetail from "./components/EventDetail/EventDetail.jsx";
 import CheckoutPage from "./components/CheckoutPage/CheckoutPage.jsx";
 import OrdersPage from "./components/OrdersPage/OrdersPage.jsx";
 import OrderDetailPage from "./components/OrderDetailPage/OrderDetailPage.jsx";
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: "events", element: <EventPage /> },
+      { path: "events/:id", element: <EventDetail /> },
       { path: "cart", element: <CartPage /> },
       { path: "checkout", element: <CheckoutPage /> },
       { path: "orders", element: <OrdersPage /> },

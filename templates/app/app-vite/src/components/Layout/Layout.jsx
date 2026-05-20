@@ -11,7 +11,7 @@ export default function Layout() {
   const { user, logout } = useAuth();
   const { cartItems } = useCart();
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const [profileOpen, setProfileOpen] = useState(false);
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
@@ -21,22 +21,44 @@ export default function Layout() {
         {/* LEFT */}
         <div className="nav-left">
           <img src={hyfLogo} alt="logo" className="logo" />
-          <Link to="/">Home</Link>
+          <Link to="/"> Home</Link>
           <Link to="/events">Events</Link>
         </div>
 
-        {/* RIGHT */}
         <div className="nav-right">
-          {/* CART (always visible) */}
           <Link to="/cart" className="cart-link">
             <FiShoppingCart />
             {totalItems > 0 && <span className="cart-count">{totalItems}</span>}
           </Link>
 
-          {/* AUTH (desktop only) */}
           <div className="auth-desktop">
             {user ? (
-              <button onClick={logout}>Logout</button>
+              <div className="profile-wrapper">
+                <button
+                  className="profile-btn"
+                  onClick={() => setProfileOpen((p) => !p)}
+                >
+                  <span className="profile-avatar">👤</span>
+                  <span className="profile-name">{user.name}</span>
+                </button>
+
+                {profileOpen && (
+                  <div className="profile-dropdown">
+                    <Link to="/orders" onClick={() => setProfileOpen(false)}>
+                      📦 My Orders
+                    </Link>
+
+                    <button
+                      onClick={() => {
+                        logout();
+                        setProfileOpen(false);
+                      }}
+                    >
+                      🚪 Logout
+                    </button>
+                  </div>
+                )}
+              </div>
             ) : (
               <>
                 <Link to="/login">Login</Link>
@@ -45,14 +67,12 @@ export default function Layout() {
             )}
           </div>
 
-          {/* HAMBURGER */}
           <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
             ☰
           </button>
         </div>
       </nav>
 
-      {/* MOBILE MENU */}
       {menuOpen && (
         <div className="mobile-menu">
           <Link to="/" onClick={() => setMenuOpen(false)}>
@@ -63,7 +83,20 @@ export default function Layout() {
           </Link>
 
           {user ? (
-            <button onClick={logout}>Logout</button>
+            <>
+              <Link to="/orders" onClick={() => setMenuOpen(false)}>
+                📦 My Orders
+              </Link>
+
+              <button
+                onClick={() => {
+                  logout();
+                  setMenuOpen(false);
+                }}
+              >
+                🚪 Logout
+              </button>
+            </>
           ) : (
             <>
               <Link to="/login" onClick={() => setMenuOpen(false)}>

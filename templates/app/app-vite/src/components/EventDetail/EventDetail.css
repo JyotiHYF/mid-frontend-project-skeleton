@@ -139,6 +139,24 @@
   color: #16a34a;
   font-weight: 600;
 }
+.go-cart-btn {
+  width: 100%;
+  margin-top: 18px;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #367f20;
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
 
 .remove-btn {
   width: 100%;

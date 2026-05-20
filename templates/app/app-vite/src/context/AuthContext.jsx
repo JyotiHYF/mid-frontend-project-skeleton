@@ -14,26 +14,28 @@ export function AuthProvider({ children }) {
   });
 
   async function login(email, password) {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/login`, {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/login`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
     });
-
+    const data = await response.json();
     if (!response.ok) {
-      throw new Error("Invalid email or password");
+      throw new Error(data.message || "Login failed");
     }
 
-    const { accessToken, user } = await response.json();
-    persist(accessToken, user);
+    persist(data.accessToken, data.user);
   }
 
   async function register(email, password) {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/register`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email, password }),
-    });
+    const response = await fetch(
+      `${import.meta.env.VITE_API_URL}/api/register`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      },
+    );
 
     if (!response.ok) {
       throw new Error("Registration failed");
