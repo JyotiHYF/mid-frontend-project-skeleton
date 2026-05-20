@@ -1,8 +1,8 @@
 import "./EventCard.css";
-
+import { useNavigate } from "react-router-dom";
 export function EventCard({ event }) {
   const isSoldOut = event.ticketsAvailable === 0;
-
+  const navigate = useNavigate();
   return (
     <div className="event-card">
       <h2>{event.name}</h2>
@@ -21,13 +21,11 @@ export function EventCard({ event }) {
       ) : (
         <p>{event.ticketsAvailable} tickets left</p>
       )}
-
       <button
         className="buy-ticket-btn"
-        disabled={isSoldOut}
-        onClick={(e) => e.stopPropagation()}
+        onClick={() => navigate(`/events/${event.id}`)}
       >
-        {isSoldOut ? "Sold out" : "Buy a ticket"}
+        Buy ticket
       </button>
     </div>
   );

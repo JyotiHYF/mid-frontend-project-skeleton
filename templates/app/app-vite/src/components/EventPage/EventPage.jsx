@@ -1,9 +1,7 @@
-import EventDetail from "../EventDetail/EventDetail";
 import EventList from "../EventList/EventList";
 import "./EventPage.css";
 import { useState, useEffect } from "react";
 function EventPage() {
-  const [selectedEvent, setSelectedEvent] = useState(null);
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -14,7 +12,7 @@ function EventPage() {
     const fetchEvents = async () => {
       setLoading(true);
       setError("");
-      setSelectedEvent(null);
+
       try {
         const res = await fetch(
           `${import.meta.env.VITE_API_URL}/api/events?q=${search}&_page=${page}&_limit=3`,
@@ -52,11 +50,7 @@ function EventPage() {
       {!loading && !error && events.length === 0 && <p>No events found</p>}
       {!loading && !error && (
         <>
-          <EventList
-            events={events}
-            onSelectEvent={setSelectedEvent}
-            selectedEvent={selectedEvent}
-          />
+          <EventList events={events} />
           <br></br>
 
           <div className="pagination">
@@ -75,7 +69,6 @@ function EventPage() {
           </div>
         </>
       )}
-      {selectedEvent && <EventDetail event={selectedEvent} />}
     </div>
   );
 }

@@ -98,3 +98,60 @@ main {
     display: block;
   }
 }
+/* wrapper */
+.profile-wrapper {
+  position: relative;
+}
+
+/* button */
+.profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* avatar */
+.profile-avatar {
+  font-size: 18px;
+}
+
+/* dropdown box */
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 40px;
+
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 160px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+  z-index: 1000;
+}
+
+.profile-dropdown a,
+.profile-dropdown button {
+  padding: 10px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: #111;
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover {
+  background: #f3f4f6;
+}

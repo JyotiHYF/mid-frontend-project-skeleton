@@ -1,16 +1,36 @@
 import "./EventDetail.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 import { useCart } from "../../context/CartContext";
 
-export default function EventDetail({ event }) {
+export default function EventDetail() {
+  const { id } = useParams();
+  const [event, setEvent] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
 
   const { addToCart, cartItems, updateQuantity } = useCart();
 
-  if (!event) {
-    return <p>Select an event to see details</p>;
-  }
+  useEffect(() => {
+    const fetchEvent = async () => {
+      try {
+        const res = await fetch(
+          `${import.meta.env.VITE_API_URL}/api/events/${id}`,
+        );
+        const data = await res.json();
+        setEvent(data);
+      } catch (err) {
+        console.log(err);
+      } finally {
+        setLoading(false);
+      }
+    };
 
+    fetchEvent();
+  }, [id]);
+
+  if (loading) return <p>Loading...</p>;
+  if (!event) return <p>Event not found</p>;
   const inCart = cartItems.find((item) => item.id === event.id);
 
   function handleAddToCart() {
@@ -97,6 +117,9 @@ export default function EventDetail({ event }) {
 
               <span className="added-text">Added ✓</span>
             </div>
+            <Link to="/cart">
+              <button className="go-cart-btn">Go to Cart 🛒</button>
+            </Link>
 
             <button
               className="remove-btn"
